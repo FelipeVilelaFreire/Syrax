@@ -5,6 +5,10 @@ title Syrax - Setup / Reset (Aguarde...)
 set "PROJECT_PATH=%~dp0"
 set "PROJECT_PATH=%PROJECT_PATH:~0,-1%"
 
+set "PORT_BACKEND=8347"
+set "PORT_WEB=4923"
+set "PORT_ADMIN=6711"
+
 cd /d "%PROJECT_PATH%"
 
 :: -------------------------------------------------------
@@ -115,9 +119,9 @@ python manage.py createsuperuser
 echo.
 echo ==========================================
 echo TUDO PRONTO!
-echo - Backend  : http://localhost:8001
-echo - Web      : http://localhost:3000
-echo - Admin    : http://localhost:5173
+echo - Backend  : http://localhost:%PORT_BACKEND%
+echo - Web      : http://localhost:%PORT_WEB%
+echo - Admin    : http://localhost:%PORT_ADMIN%
 echo.
 echo Aperte uma tecla para abrir os 3 servidores...
 echo ==========================================
@@ -125,14 +129,14 @@ pause >nul
 
 :: Monta comando de ativacao do backend conforme o ambiente detectado
 if "%USE_CONDA%"=="1" (
-    set "BACKEND_START=call conda activate syrax && python manage.py runserver 8001 --settings=config.settings.development"
+    set "BACKEND_START=call conda activate syrax && python manage.py runserver %PORT_BACKEND% --settings=config.settings.development"
 ) else (
-    set "BACKEND_START=call %PROJECT_PATH%\backend\.venv\Scripts\activate.bat && python manage.py runserver 8001 --settings=config.settings.development"
+    set "BACKEND_START=call %PROJECT_PATH%\backend\.venv\Scripts\activate.bat && python manage.py runserver %PORT_BACKEND% --settings=config.settings.development"
 )
 
 wt -d "%PROJECT_PATH%" cmd /k "claude" ; ^
 new-tab -d "%PROJECT_PATH%\backend" cmd /k "%BACKEND_START%" ; ^
-split-pane -V -d "%PROJECT_PATH%\web" cmd /k "npm run dev" ; ^
-split-pane -V -d "%PROJECT_PATH%\admin" cmd /k "npm run dev"
+split-pane -V -d "%PROJECT_PATH%\web" cmd /k "npm run dev -- --port %PORT_WEB%" ; ^
+split-pane -V -d "%PROJECT_PATH%\admin" cmd /k "npm run dev -- --port %PORT_ADMIN%"
 
 exit

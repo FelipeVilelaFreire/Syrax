@@ -4,6 +4,10 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
+PORT_BACKEND=8347
+PORT_WEB=4923
+PORT_ADMIN=6711
+
 echo "=========================================="
 echo " Syrax - Setup / Reset"
 echo "=========================================="
@@ -124,9 +128,9 @@ python manage.py createsuperuser
 echo ""
 echo "=========================================="
 echo " TUDO PRONTO!"
-echo " - Backend : http://localhost:8001"
-echo " - Web     : http://localhost:3000"
-echo " - Admin   : http://localhost:5173"
+echo " - Backend : http://localhost:${PORT_BACKEND}"
+echo " - Web     : http://localhost:${PORT_WEB}"
+echo " - Admin   : http://localhost:${PORT_ADMIN}"
 echo ""
 echo " Duplo clique em syrax.command para iniciar os servidores."
 echo "=========================================="

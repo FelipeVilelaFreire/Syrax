@@ -2,6 +2,10 @@
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+PORT_BACKEND=8347
+PORT_WEB=4923
+PORT_ADMIN=6711
+
 # -------------------------------------------------------
 # Detecta qual ambiente Python usar:
 #   1. Conda com env "syrax"  (preferido)
@@ -29,9 +33,9 @@ if [ -z "$ACTIVATE_CMD" ]; then
     exit 1
 fi
 
-BACKEND_CMD="cd '$SCRIPT_DIR/backend' && $ACTIVATE_CMD && python manage.py runserver 8001 --settings=config.settings.development"
-WEB_CMD="cd '$SCRIPT_DIR/web' && npm run dev"
-ADMIN_CMD="cd '$SCRIPT_DIR/admin' && npm run dev"
+BACKEND_CMD="cd '$SCRIPT_DIR/backend' && $ACTIVATE_CMD && python manage.py runserver $PORT_BACKEND --settings=config.settings.development"
+WEB_CMD="cd '$SCRIPT_DIR/web' && npm run dev -- --port $PORT_WEB"
+ADMIN_CMD="cd '$SCRIPT_DIR/admin' && npm run dev -- --port $PORT_ADMIN"
 
 # -------------------------------------------------------
 # Abre 3 abas no Terminal do Mac via osascript
