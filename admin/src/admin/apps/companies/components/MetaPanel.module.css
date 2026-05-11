@@ -1,8 +1,8 @@
 .panel {
-  background: var(--admin-bg-primary);
+  background: var(--admin-bg-secondary);
   border: 1px solid var(--admin-border-light);
   border-radius: var(--admin-radius-lg);
-  padding: var(--admin-space-2xl);
+  padding: var(--admin-space-lg) var(--admin-space-2xl);
   display: flex;
   flex-direction: column;
   gap: var(--admin-space-md);
@@ -12,36 +12,36 @@
   display: flex;
   align-items: center;
   gap: var(--admin-space-sm);
-  color: var(--admin-text-secondary);
+  color: var(--admin-text-tertiary);
 }
 
 .title {
-  font-size: var(--admin-text-md);
+  font-size: var(--admin-text-sm);
   font-weight: var(--admin-weight-semibold);
-  color: var(--admin-text-primary);
+  color: var(--admin-text-secondary);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--admin-space-lg);
 }
 
 .cell {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
 }
 
 .label {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   font-size: 10px;
   font-weight: var(--admin-weight-semibold);
   color: var(--admin-text-tertiary);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
 }
 
 .value {
@@ -55,4 +55,5 @@
   font-size: 11px;
   color: var(--admin-text-secondary);
   word-break: break-all;
+  line-height: 1.5;
 }

@@ -24,7 +24,7 @@ const NAV_SECTIONS: NavSection[] = [
   {
     title: STRINGS.nav.sectionPrincipal,
     items: [
-      { label: STRINGS.nav.dashboard, href: ROUTES.DASHBOARD, icon: ICON_NAMES.dashboard, adminOnly: true },
+      { label: STRINGS.nav.dashboard, href: ROUTES.DASHBOARD, icon: ICON_NAMES.dashboard },
       { label: STRINGS.nav.leads, href: ROUTES.LEADS, icon: ICON_NAMES.leads },
       { label: STRINGS.nav.oportunidades, href: ROUTES.OPORTUNIDADES, icon: ICON_NAMES.oportunidades },
       { label: STRINGS.nav.conversas, href: ROUTES.CONVERSAS, icon: ICON_NAMES.conversas },

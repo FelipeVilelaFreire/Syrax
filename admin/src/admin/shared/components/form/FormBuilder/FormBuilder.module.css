@@ -1,13 +1,13 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: var(--admin-space-lg);
+  gap: var(--admin-space-xl);
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  gap: var(--admin-space-xs);
+  gap: 6px;
 }
 
 .label {
@@ -16,18 +16,27 @@
   color: var(--admin-text-secondary);
 }
 
-.select, .textarea {
-  padding: 9px 12px;
-  border: 1px solid var(--admin-border-medium);
+.select,
+.textarea {
+  padding: 10px 14px;
+  border: 1px solid var(--admin-border-light);
   border-radius: var(--admin-radius-md);
   font-size: var(--admin-text-base);
   background: var(--admin-bg-primary);
   color: var(--admin-text-primary);
   outline: none;
   font-family: inherit;
+  transition: border-color var(--admin-transition-fast), box-shadow var(--admin-transition-fast);
+  line-height: 1.4;
 }
 
-.select:focus, .textarea:focus {
+.select:hover,
+.textarea:hover {
+  border-color: var(--admin-border-medium);
+}
+
+.select:focus,
+.textarea:focus {
   border-color: var(--admin-primary);
   box-shadow: 0 0 0 3px var(--admin-primary-bg);
 }
@@ -41,6 +50,7 @@
   font-size: var(--admin-text-sm);
   color: var(--admin-text-secondary);
   cursor: pointer;
+  padding: var(--admin-space-sm) 0;
 }
 
 .error {

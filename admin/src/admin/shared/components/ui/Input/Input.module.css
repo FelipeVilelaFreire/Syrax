@@ -1,7 +1,7 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: var(--admin-space-xs);
+  gap: 6px;
 }
 
 .label {
@@ -11,15 +11,18 @@
 }
 
 .input {
-  padding: 9px 12px;
-  border: 1px solid var(--admin-border-medium);
+  padding: 10px 14px;
+  border: 1px solid var(--admin-border-light);
   border-radius: var(--admin-radius-md);
   font-size: var(--admin-text-base);
   background: var(--admin-bg-primary);
   color: var(--admin-text-primary);
-  transition: border-color var(--admin-transition-fast);
+  transition: border-color var(--admin-transition-fast), box-shadow var(--admin-transition-fast);
   outline: none;
+  line-height: 1.4;
 }
+
+.input:hover { border-color: var(--admin-border-medium); }
 
 .input:focus {
   border-color: var(--admin-primary);
@@ -28,7 +31,8 @@
 
 .input::placeholder { color: var(--admin-text-tertiary); }
 
-.hasError { border-color: var(--admin-error); }
+.hasError { border-color: var(--admin-error) !important; }
+.hasError:focus { box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.08); }
 
 .error {
   font-size: var(--admin-text-xs);

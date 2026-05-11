@@ -4,15 +4,19 @@ from .models import User
 
 
 class UserSerializer(serializers.ModelSerializer):
-    company_id = serializers.SerializerMethodField()
+    company_id   = serializers.SerializerMethodField()
+    company_name = serializers.SerializerMethodField()
 
     class Meta:
         model = User
-        fields = ['id', 'email', 'name', 'role', 'is_active', 'is_superuser', 'company_id', 'created_at']
+        fields = ['id', 'email', 'name', 'role', 'is_active', 'is_superuser', 'company_id', 'company_name', 'created_at']
         read_only_fields = fields
 
     def get_company_id(self, obj):
         return str(obj.company_id) if obj.company_id else None
+
+    def get_company_name(self, obj):
+        return obj.company.name if obj.company_id else None
 
 
 class LoginSerializer(serializers.Serializer):
@@ -38,6 +42,29 @@ class UserUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['name']
+
+
+class TeamMemberCreateSerializer(serializers.ModelSerializer):
+    """Used by company admins to invite new operators or admins to their tenant."""
+
+    password = serializers.CharField(write_only=True, min_length=8)
+
+    class Meta:
+        model = User
+        fields = ['email', 'name', 'password', 'role']
+
+    def validate_email(self, value):
+        return value.lower()
+
+    def create(self, validated_data):
+        company = self.context['request'].company
+        return User.objects.create_user(company=company, **validated_data)
+
+
+class TeamMemberUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['name', 'role', 'is_active']
 
 
 def get_tokens_for_user(user):

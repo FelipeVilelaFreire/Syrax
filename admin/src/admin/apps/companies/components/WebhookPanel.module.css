@@ -2,17 +2,18 @@
   background: var(--admin-bg-primary);
   border: 1px solid var(--admin-border-light);
   border-radius: var(--admin-radius-lg);
-  padding: var(--admin-space-2xl);
+  padding: var(--admin-space-xl) var(--admin-space-2xl);
   display: flex;
   flex-direction: column;
-  gap: var(--admin-space-md);
+  gap: var(--admin-space-lg);
+  box-shadow: var(--admin-shadow-sm);
 }
 
 .header {
   display: flex;
   align-items: center;
   gap: var(--admin-space-sm);
-  color: var(--admin-text-secondary);
+  color: var(--admin-text-tertiary);
 }
 
 .title {
@@ -24,7 +25,8 @@
 
 .description {
   font-size: var(--admin-text-sm);
-  color: var(--admin-text-secondary);
+  color: var(--admin-text-tertiary);
+  line-height: 1.6;
 }
 
 .empty {
@@ -41,11 +43,10 @@
 }
 
 .row {
-  display: grid;
-  grid-template-columns: 180px 1fr auto;
-  gap: var(--admin-space-md);
+  display: flex;
   align-items: center;
-  padding: var(--admin-space-md);
+  gap: var(--admin-space-md);
+  padding: var(--admin-space-md) var(--admin-space-lg);
   background: var(--admin-bg-secondary);
   border: 1px solid var(--admin-border-light);
   border-radius: var(--admin-radius-md);
@@ -54,18 +55,22 @@
 .platformInfo {
   display: flex;
   align-items: center;
-  gap: var(--admin-space-sm);
+  gap: var(--admin-space-md);
+  min-width: 160px;
+  flex-shrink: 0;
 }
 
 .platformIcon {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: var(--admin-radius-md);
   background: var(--admin-primary-bg);
   color: var(--admin-primary-hover);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(184, 144, 30, 0.12);
 }
 
 .platformLabel {
@@ -78,15 +83,17 @@
   font-size: var(--admin-text-xs);
   color: var(--admin-text-tertiary);
   font-family: monospace;
+  margin-top: 2px;
 }
 
 .url {
+  flex: 1;
   font-family: monospace;
   font-size: 11px;
   color: var(--admin-text-secondary);
   background: var(--admin-bg-primary);
-  padding: 6px 10px;
-  border-radius: var(--admin-radius-sm);
+  padding: 7px 12px;
+  border-radius: var(--admin-radius-md);
   border: 1px solid var(--admin-border-light);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -97,20 +104,25 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
+  padding: 7px 14px;
   background: var(--admin-bg-primary);
-  border: 1px solid var(--admin-border-medium);
+  border: 1px solid var(--admin-border-light);
   border-radius: var(--admin-radius-md);
   font-size: var(--admin-text-xs);
   font-weight: var(--admin-weight-semibold);
   color: var(--admin-text-secondary);
   cursor: pointer;
   font-family: inherit;
-  transition: background var(--admin-transition-fast), color var(--admin-transition-fast), border-color var(--admin-transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition:
+    background var(--admin-transition-fast),
+    color var(--admin-transition-fast),
+    border-color var(--admin-transition-fast);
 }
 
 .copyBtn:hover {
   background: var(--admin-primary-bg);
   color: var(--admin-primary-hover);
-  border-color: var(--admin-primary);
+  border-color: rgba(184, 144, 30, 0.3);
 }

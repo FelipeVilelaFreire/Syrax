@@ -6,7 +6,7 @@ import styles from './TopBar.module.css';
 const TITLES = {
   '/':          { label: 'Dashboard', icon: ICON.dashboard },
   '/companies': { label: 'Empresas',  icon: ICON.companies },
-  '/users':     { label: 'Usuários',  icon: ICON.users },
+  '/users':     { label: 'Acessos ao sistema', icon: ICON.users },
 };
 
 function resolveTitle(pathname) {

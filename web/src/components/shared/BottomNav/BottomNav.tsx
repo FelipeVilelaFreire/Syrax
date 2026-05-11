@@ -16,13 +16,11 @@ export function BottomNav({ role }: BottomNavProps) {
   const pathname = usePathname();
 
   const items = [
-    { label: STRINGS.nav.leads, href: ROUTES.LEADS, icon: ICON_NAMES.leads },
+    { label: STRINGS.nav.dashboard,    href: ROUTES.DASHBOARD,    icon: ICON_NAMES.dashboard },
+    { label: STRINGS.nav.leads,        href: ROUTES.LEADS,        icon: ICON_NAMES.leads },
     { label: STRINGS.nav.oportunidades, href: ROUTES.OPORTUNIDADES, icon: ICON_NAMES.oportunidades },
-    { label: STRINGS.nav.conversas, href: ROUTES.CONVERSAS, icon: ICON_NAMES.conversas },
+    { label: STRINGS.nav.conversas,    href: ROUTES.CONVERSAS,    icon: ICON_NAMES.conversas },
     { label: STRINGS.nav.recuperacoes, href: ROUTES.RECUPERACOES, icon: ICON_NAMES.recuperacoes },
-    ...(role === 'admin'
-      ? [{ label: STRINGS.nav.dashboard, href: ROUTES.DASHBOARD, icon: ICON_NAMES.dashboard }]
-      : []),
   ];
 
   return (

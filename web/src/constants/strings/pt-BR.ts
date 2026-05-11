@@ -59,6 +59,8 @@ export const PT_BR = {
       leadsReativados: 'Leads Reativados',
       conversoesGeradas: 'Conversões Geradas',
       emNegociacao: 'Em Negociação',
+      leadsNovos: 'Leads Novos',
+      leadsPerdidos: 'Leads Perdidos',
     },
     charts: {
       receitaTitle: 'Receita Recuperada — 14 dias',

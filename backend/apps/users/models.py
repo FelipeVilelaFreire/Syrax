@@ -22,8 +22,8 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     class Role(models.TextChoices):
-        ADMIN = 'admin', 'Admin'
-        OPERATOR = 'operator', 'Operator'
+        ADMIN = 'admin', 'Gerente'
+        OPERATOR = 'operator', 'Operador'
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(unique=True)

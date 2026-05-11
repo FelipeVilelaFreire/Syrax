@@ -7,7 +7,7 @@ import styles from './Sidebar.module.css';
 const NAV = [
   { path: '/',          label: 'Dashboard', icon: ICON.dashboard },
   { path: '/companies', label: 'Empresas',  icon: ICON.companies },
-  { path: '/users',     label: 'Usuários',  icon: ICON.users },
+  { path: '/users',     label: 'Acessos',   icon: ICON.users },
 ];
 
 export default function Sidebar() {

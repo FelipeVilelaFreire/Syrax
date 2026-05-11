@@ -5,33 +5,37 @@
   border-right: 1px solid var(--admin-border-light);
   display: flex;
   flex-direction: column;
-  padding: var(--admin-space-lg);
+  padding: var(--admin-space-lg) var(--admin-space-md);
   position: fixed;
   left: 0;
   top: 0;
+  overflow-y: auto;
 }
 
 .brand {
   display: flex;
-  align-items: baseline;
-  gap: var(--admin-space-xs);
-  padding: var(--admin-space-sm) var(--admin-space-md);
-  margin-bottom: var(--admin-space-2xl);
+  align-items: center;
+  gap: var(--admin-space-sm);
+  padding: var(--admin-space-md) var(--admin-space-md);
+  margin-bottom: var(--admin-space-xl);
 }
 
 .brandText {
-  font-size: var(--admin-text-lg);
+  font-size: var(--admin-text-md);
   font-weight: var(--admin-weight-bold);
   color: var(--admin-primary);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 .brandTag {
   color: var(--admin-text-tertiary);
-  font-weight: var(--admin-weight-regular);
+  font-weight: var(--admin-weight-medium);
   font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
+  padding: 2px 6px;
+  background: var(--admin-bg-tertiary);
+  border-radius: var(--admin-radius-sm);
 }
 
 .nav {
@@ -43,38 +47,57 @@
 
 .sectionTitle {
   padding: 0 var(--admin-space-md);
+  margin-top: var(--admin-space-md);
   margin-bottom: var(--admin-space-sm);
   font-size: 10px;
   font-weight: var(--admin-weight-semibold);
   color: var(--admin-text-tertiary);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
 }
 
 .item {
   display: flex;
   align-items: center;
   gap: var(--admin-space-md);
-  padding: var(--admin-space-sm) var(--admin-space-md);
+  padding: 10px var(--admin-space-md);
   border-radius: var(--admin-radius-md);
   color: var(--admin-text-secondary);
   font-size: var(--admin-text-sm);
   font-weight: var(--admin-weight-medium);
   transition: background var(--admin-transition-fast), color var(--admin-transition-fast);
+  position: relative;
 }
 
-.item:hover { background: var(--admin-bg-tertiary); color: var(--admin-text-primary); }
+.item:hover {
+  background: var(--admin-bg-tertiary);
+  color: var(--admin-text-primary);
+}
+
 .active {
   background: var(--admin-primary-bg);
   color: var(--admin-primary-hover);
   font-weight: var(--admin-weight-semibold);
 }
 
+.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: var(--admin-primary);
+  border-radius: 0 3px 3px 0;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
-  gap: var(--admin-space-sm);
-  padding-top: var(--admin-space-md);
+  gap: var(--admin-space-xs);
+  padding-top: var(--admin-space-lg);
+  margin-top: var(--admin-space-md);
   border-top: 1px solid var(--admin-border-light);
 }
 
@@ -82,13 +105,13 @@
   display: flex;
   align-items: center;
   gap: var(--admin-space-sm);
-  padding: var(--admin-space-sm);
+  padding: var(--admin-space-sm) var(--admin-space-md);
   border-radius: var(--admin-radius-md);
 }
 
 .avatar {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: var(--admin-radius-full);
   background: var(--admin-primary-bg);
   color: var(--admin-primary-hover);
@@ -98,6 +121,7 @@
   font-weight: var(--admin-weight-bold);
   font-size: var(--admin-text-sm);
   flex-shrink: 0;
+  border: 1px solid rgba(184, 144, 30, 0.15);
 }
 
 .userInfo {
@@ -122,22 +146,25 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-top: 1px;
 }
 
 .logout {
   display: flex;
   align-items: center;
   gap: var(--admin-space-sm);
-  padding: var(--admin-space-sm) var(--admin-space-md);
+  padding: 10px var(--admin-space-md);
   border-radius: var(--admin-radius-md);
   color: var(--admin-text-tertiary);
   font-size: var(--admin-text-sm);
   font-weight: var(--admin-weight-medium);
   font-family: inherit;
   transition: background var(--admin-transition-fast), color var(--admin-transition-fast);
+  width: 100%;
+  text-align: left;
 }
 
 .logout:hover {
-  background: rgba(239, 68, 68, 0.08);
+  background: rgba(220, 38, 38, 0.07);
   color: var(--admin-error);
 }

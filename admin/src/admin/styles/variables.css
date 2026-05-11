@@ -1,49 +1,49 @@
 :root {
-  /* Brand SYRAX — rich antique gold (matches web/) */
+  /* Brand */
   --admin-primary:        #B8901E;
-  --admin-primary-hover:  #A07C18;
-  --admin-primary-bg:     rgba(184, 144, 30, 0.10);
+  --admin-primary-hover:  #9A7818;
+  --admin-primary-bg:     rgba(184, 144, 30, 0.07);
 
-  /* Status colors */
+  /* Status */
   --admin-status-yes:     #059669;
-  --admin-status-yes-bg:  rgba(16, 185, 129, 0.15);
-  --admin-status-no:      #525252;
-  --admin-status-no-bg:   rgba(82, 82, 82, 0.10);
-  --admin-warning:        #f59e0b;
-  --admin-error:          #ef4444;
+  --admin-status-yes-bg:  rgba(5, 150, 105, 0.09);
+  --admin-status-no:      #6b7280;
+  --admin-status-no-bg:   rgba(107, 114, 128, 0.08);
+  --admin-warning:        #d97706;
+  --admin-error:          #dc2626;
 
-  /* Surfaces — light theme for admin (contrasting with dark consumer web) */
+  /* Surfaces */
   --admin-bg-primary:     #ffffff;
-  --admin-bg-secondary:   #f9fafb;
-  --admin-bg-tertiary:    #f3f4f6;
+  --admin-bg-secondary:   #f7f8fa;
+  --admin-bg-tertiary:    #f0f2f5;
 
   /* Borders */
-  --admin-border-light:   #e5e7eb;
-  --admin-border-medium:  #d1d5db;
+  --admin-border-light:   #eaecf0;
+  --admin-border-medium:  #d6d9df;
 
   /* Text */
-  --admin-text-primary:   #111827;
+  --admin-text-primary:   #0d1117;
   --admin-text-secondary: #4b5563;
   --admin-text-tertiary:  #9ca3af;
 
-  /* Spacing */
-  --admin-space-xs: 4px;
-  --admin-space-sm: 8px;
-  --admin-space-md: 12px;
-  --admin-space-lg: 16px;
-  --admin-space-xl: 20px;
-  --admin-space-2xl: 24px;
-  --admin-space-3xl: 32px;
-  --admin-space-4xl: 48px;
+  /* Spacing — generous */
+  --admin-space-xs:  4px;
+  --admin-space-sm:  8px;
+  --admin-space-md:  14px;
+  --admin-space-lg:  20px;
+  --admin-space-xl:  28px;
+  --admin-space-2xl: 36px;
+  --admin-space-3xl: 52px;
+  --admin-space-4xl: 72px;
 
   /* Typography */
   --admin-text-xs:   11px;
   --admin-text-sm:   13px;
   --admin-text-base: 14px;
-  --admin-text-md:   16px;
+  --admin-text-md:   15px;
   --admin-text-lg:   18px;
-  --admin-text-xl:   24px;
-  --admin-text-2xl:  32px;
+  --admin-text-xl:   22px;
+  --admin-text-2xl:  30px;
 
   --admin-weight-regular:  400;
   --admin-weight-medium:   500;
@@ -51,21 +51,22 @@
   --admin-weight-bold:     700;
 
   /* Radius */
-  --admin-radius-sm:   4px;
+  --admin-radius-sm:   5px;
   --admin-radius-md:   8px;
   --admin-radius-lg:   12px;
+  --admin-radius-xl:   16px;
   --admin-radius-full: 9999px;
 
-  /* Shadows */
-  --admin-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --admin-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --admin-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.10);
+  /* Shadows — very subtle */
+  --admin-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --admin-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --admin-shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
 
   /* Transitions */
-  --admin-transition-fast:   150ms ease;
-  --admin-transition-normal: 250ms ease;
+  --admin-transition-fast:   120ms ease;
+  --admin-transition-normal: 200ms ease;
 
   /* Layout */
-  --admin-sidebar-width: 240px;
-  --admin-topbar-height: 56px;
+  --admin-sidebar-width:  260px;
+  --admin-topbar-height:  62px;
 }

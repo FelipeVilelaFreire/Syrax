@@ -12,5 +12,6 @@
 
 .content {
   flex: 1;
-  padding: var(--admin-space-2xl);
+  padding: var(--admin-space-2xl) var(--admin-space-3xl);
+  max-width: 1280px;
 }

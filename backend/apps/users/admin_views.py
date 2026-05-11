@@ -7,11 +7,15 @@ from apps.core.permissions import IsSuperAdmin
 
 
 class AdminUserCreateSerializer(serializers.ModelSerializer):
+    """
+    Super admin creates a company user. is_superuser is intentionally excluded —
+    platform staff accounts are created only via manage.py createsuperuser.
+    """
     password = serializers.CharField(write_only=True, min_length=8)
 
     class Meta:
         model = User
-        fields = ['email', 'name', 'password', 'role', 'company', 'is_active', 'is_superuser']
+        fields = ['email', 'name', 'password', 'role', 'company', 'is_active']
 
     def validate_email(self, value):
         return value.lower()
@@ -25,7 +29,7 @@ class AdminUserUpdateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ['name', 'role', 'company', 'is_active', 'is_superuser', 'password']
+        fields = ['name', 'role', 'company', 'is_active', 'password']
 
     def update(self, instance, validated_data):
         password = validated_data.pop('password', None)

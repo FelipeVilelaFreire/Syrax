@@ -26,10 +26,19 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   const router = useRouter();
   const pathname = usePathname();
 
+  // Dashboard é acessível a todos, mas mostra KPIs diferentes por role (useRole no Screen)
+  const ADMIN_ONLY = [
+    ROUTES.INTEGRACOES,
+    ROUTES.RELATORIOS,
+    ROUTES.CONFIGURACOES,
+  ];
+
   useEffect(() => {
     if (loading) return;
     if (!user) { router.replace(ROUTES.LOGIN); return; }
-  }, [user, loading, router]);
+    const restricted = ADMIN_ONLY.some((r) => pathname.startsWith(r));
+    if (restricted && user.role !== 'admin') router.replace(ROUTES.LEADS);
+  }, [user, loading, router, pathname]);
 
   if (loading) return <PageSkeleton />;
   if (!user) return null;

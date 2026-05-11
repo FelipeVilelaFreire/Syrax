@@ -14,11 +14,12 @@
   display: flex;
   align-items: center;
   gap: var(--admin-space-sm);
-  color: var(--admin-text-secondary);
+  color: var(--admin-text-tertiary);
 }
 
 .title {
   font-size: var(--admin-text-md);
   font-weight: var(--admin-weight-semibold);
   color: var(--admin-text-primary);
+  letter-spacing: -0.01em;
 }

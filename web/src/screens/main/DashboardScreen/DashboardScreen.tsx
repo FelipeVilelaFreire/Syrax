@@ -9,37 +9,75 @@ import { formatBRL, formatDateTime } from '@/src/lib/format';
 import { useDashboardScreen } from '@/src/hooks/dashboard/useDashboardScreen';
 
 export function DashboardScreen() {
-  const { kpis, revenueData, recentActions, loading, error, refresh } = useDashboardScreen();
+  const {
+    isAdmin,
+    adminKpis,
+    operationalKpis,
+    revenueData,
+    recentActions,
+    loading,
+    error,
+    refresh,
+  } = useDashboardScreen();
+
   const s = STRINGS.dashboard;
 
   if (loading) return <PageSkeleton />;
-  if (error) return <ErrorState message={error} onRetry={refresh} />;
-  if (!kpis) return null;
+  if (error)   return <ErrorState message={error} onRetry={refresh} />;
+  if (!operationalKpis) return null;
 
   return (
     <div className={styles.screen}>
-      <div className={styles.kpiGrid}>
-        <KpiCard
-          label={s.kpi.receitaRecuperada}
-          value={formatBRL(kpis.receitaRecuperada)}
-          delta={kpis.receitaRecuperadaDelta}
-        />
-        <KpiCard
-          label={s.kpi.leadsReativados}
-          value={String(kpis.leadsReativados)}
-        />
-        <KpiCard
-          label={s.kpi.conversoesGeradas}
-          value={String(kpis.conversoesGeradas)}
-        />
-        <KpiCard
-          label={s.kpi.emNegociacao}
-          value={formatBRL(kpis.emNegociacao)}
-        />
-      </div>
 
-      <DashboardCharts revenueData={revenueData} />
+      {/* KPIs financeiros — só Gerente */}
+      {isAdmin && adminKpis && (
+        <div className={styles.kpiGrid}>
+          <KpiCard
+            label={s.kpi.receitaRecuperada}
+            value={formatBRL(adminKpis.receitaRecuperada)}
+            delta={adminKpis.receitaRecuperadaDelta}
+          />
+          <KpiCard
+            label={s.kpi.emNegociacao}
+            value={formatBRL(adminKpis.emNegociacaoValor)}
+          />
+          <KpiCard
+            label={s.kpi.conversoesGeradas}
+            value={String(operationalKpis.conversoesGeradas)}
+          />
+          <KpiCard
+            label={s.kpi.leadsReativados}
+            value={String(operationalKpis.emNegociacao)}
+          />
+        </div>
+      )}
 
+      {/* KPIs operacionais — todos (Gerente e Operador) */}
+      {!isAdmin && (
+        <div className={styles.kpiGrid}>
+          <KpiCard
+            label={s.kpi.leadsNovos}
+            value={String(operationalKpis.leadsNovos)}
+          />
+          <KpiCard
+            label={s.kpi.emNegociacao}
+            value={String(operationalKpis.emNegociacao)}
+          />
+          <KpiCard
+            label={s.kpi.conversoesGeradas}
+            value={String(operationalKpis.conversoesGeradas)}
+          />
+          <KpiCard
+            label={s.kpi.leadsPerdidos}
+            value={String(operationalKpis.leadsPerdidos)}
+          />
+        </div>
+      )}
+
+      {/* Gráfico de receita — só Gerente */}
+      {isAdmin && <DashboardCharts revenueData={revenueData} />}
+
+      {/* Atividade recente — todos */}
       {recentActions.length > 0 && (
         <div className={styles.section}>
           <p className={styles.sectionTitle}>{s.acoesIa.title}</p>

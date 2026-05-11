@@ -61,6 +61,8 @@ export const EN: Strings = {
       leadsReativados: 'Reactivated Leads',
       conversoesGeradas: 'Conversions Generated',
       emNegociacao: 'In Negotiation',
+      leadsNovos: 'New Leads',
+      leadsPerdidos: 'Lost Leads',
     },
     charts: {
       receitaTitle: 'Recovered Revenue — 14 days',
