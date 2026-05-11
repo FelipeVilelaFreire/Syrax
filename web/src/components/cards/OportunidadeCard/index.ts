@@ -1,0 +1,1 @@
+export { OportunidadeCard } from './OportunidadeCard';

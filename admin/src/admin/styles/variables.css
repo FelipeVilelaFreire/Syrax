@@ -1,0 +1,71 @@
+:root {
+  /* Brand SYRAX — rich antique gold (matches web/) */
+  --admin-primary:        #B8901E;
+  --admin-primary-hover:  #A07C18;
+  --admin-primary-bg:     rgba(184, 144, 30, 0.10);
+
+  /* Status colors */
+  --admin-status-yes:     #059669;
+  --admin-status-yes-bg:  rgba(16, 185, 129, 0.15);
+  --admin-status-no:      #525252;
+  --admin-status-no-bg:   rgba(82, 82, 82, 0.10);
+  --admin-warning:        #f59e0b;
+  --admin-error:          #ef4444;
+
+  /* Surfaces — light theme for admin (contrasting with dark consumer web) */
+  --admin-bg-primary:     #ffffff;
+  --admin-bg-secondary:   #f9fafb;
+  --admin-bg-tertiary:    #f3f4f6;
+
+  /* Borders */
+  --admin-border-light:   #e5e7eb;
+  --admin-border-medium:  #d1d5db;
+
+  /* Text */
+  --admin-text-primary:   #111827;
+  --admin-text-secondary: #4b5563;
+  --admin-text-tertiary:  #9ca3af;
+
+  /* Spacing */
+  --admin-space-xs: 4px;
+  --admin-space-sm: 8px;
+  --admin-space-md: 12px;
+  --admin-space-lg: 16px;
+  --admin-space-xl: 20px;
+  --admin-space-2xl: 24px;
+  --admin-space-3xl: 32px;
+  --admin-space-4xl: 48px;
+
+  /* Typography */
+  --admin-text-xs:   11px;
+  --admin-text-sm:   13px;
+  --admin-text-base: 14px;
+  --admin-text-md:   16px;
+  --admin-text-lg:   18px;
+  --admin-text-xl:   24px;
+  --admin-text-2xl:  32px;
+
+  --admin-weight-regular:  400;
+  --admin-weight-medium:   500;
+  --admin-weight-semibold: 600;
+  --admin-weight-bold:     700;
+
+  /* Radius */
+  --admin-radius-sm:   4px;
+  --admin-radius-md:   8px;
+  --admin-radius-lg:   12px;
+  --admin-radius-full: 9999px;
+
+  /* Shadows */
+  --admin-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --admin-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --admin-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.10);
+
+  /* Transitions */
+  --admin-transition-fast:   150ms ease;
+  --admin-transition-normal: 250ms ease;
+
+  /* Layout */
+  --admin-sidebar-width: 240px;
+  --admin-topbar-height: 56px;
+}

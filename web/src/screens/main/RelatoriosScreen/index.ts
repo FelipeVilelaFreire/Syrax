@@ -1,0 +1,1 @@
+export { RelatoriosScreen } from './RelatoriosScreen';

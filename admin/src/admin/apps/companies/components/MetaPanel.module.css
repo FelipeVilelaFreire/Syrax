@@ -1,0 +1,58 @@
+.panel {
+  background: var(--admin-bg-primary);
+  border: 1px solid var(--admin-border-light);
+  border-radius: var(--admin-radius-lg);
+  padding: var(--admin-space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--admin-space-md);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--admin-space-sm);
+  color: var(--admin-text-secondary);
+}
+
+.title {
+  font-size: var(--admin-text-md);
+  font-weight: var(--admin-weight-semibold);
+  color: var(--admin-text-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--admin-space-lg);
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: var(--admin-weight-semibold);
+  color: var(--admin-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.value {
+  font-size: var(--admin-text-sm);
+  color: var(--admin-text-primary);
+  font-weight: var(--admin-weight-medium);
+}
+
+.mono {
+  font-family: monospace;
+  font-size: 11px;
+  color: var(--admin-text-secondary);
+  word-break: break-all;
+}

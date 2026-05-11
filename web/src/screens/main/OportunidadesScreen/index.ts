@@ -1,0 +1,1 @@
+export { OportunidadesScreen } from './OportunidadesScreen';

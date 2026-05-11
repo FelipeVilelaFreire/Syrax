@@ -1,0 +1,1 @@
+export { ConfiguracoesScreen } from './ConfiguracoesScreen';

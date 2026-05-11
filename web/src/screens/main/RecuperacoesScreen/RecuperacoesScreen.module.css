@@ -1,0 +1,17 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.kpiRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 769px) {
+  .kpiRow {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

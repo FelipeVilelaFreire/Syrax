@@ -1,0 +1,107 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.tabs {
+  display: flex;
+  gap: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-sm);
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-family: var(--font-body);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tab:hover {
+  color: var(--color-text);
+}
+
+.tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.section {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 480px;
+}
+
+.saveBtn {
+  align-self: flex-start;
+}
+
+.teamList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.teamMember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-card-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.memberName {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.memberEmail {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-subtle);
+}
+
+.memberRole {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.comingSoon {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-2xl);
+  text-align: center;
+}
+
+.error {
+  font-size: var(--font-size-sm);
+  color: var(--color-error);
+}

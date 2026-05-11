@@ -1,0 +1,43 @@
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+@media (min-width: 769px) {
+  .card {
+    padding: var(--spacing-2xl);
+  }
+}
+
+.title {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.value {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 5vw, 1.875rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+.delta {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.positive { color: var(--color-success); }
+.negative { color: var(--color-error); }
+
+.subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-subtle);
+}

@@ -1,0 +1,43 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: var(--admin-radius-full);
+  font-weight: var(--admin-weight-semibold);
+  line-height: 1;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.sm { padding: 3px 8px;  font-size: 10px; letter-spacing: 0.03em; }
+.md { padding: 4px 10px; font-size: 11px; letter-spacing: 0.03em; }
+
+.success {
+  background: var(--admin-status-yes-bg);
+  color: var(--admin-status-yes);
+}
+
+.neutral {
+  background: var(--admin-bg-tertiary);
+  color: var(--admin-text-secondary);
+}
+
+.warning {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--admin-warning);
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--admin-error);
+}
+
+.primary {
+  background: var(--admin-primary-bg);
+  color: var(--admin-primary-hover);
+}
+
+.muted {
+  background: var(--admin-status-no-bg);
+  color: var(--admin-text-tertiary);
+}

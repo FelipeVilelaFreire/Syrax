@@ -1,0 +1,24 @@
+.topbar {
+  height: var(--admin-topbar-height);
+  background: var(--admin-bg-primary);
+  border-bottom: 1px solid var(--admin-border-light);
+  padding: 0 var(--admin-space-3xl);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--admin-space-sm);
+  color: var(--admin-text-secondary);
+}
+
+.title {
+  font-size: var(--admin-text-md);
+  font-weight: var(--admin-weight-semibold);
+  color: var(--admin-text-primary);
+}

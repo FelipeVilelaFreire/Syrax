@@ -1,0 +1,17 @@
+export const ROUTES = {
+  HOME: '/',
+  LOGIN: '/login',
+  DASHBOARD: '/dashboard',
+  LEADS: '/leads',
+  LEAD: (id: string) => `/leads/${id}`,
+  OPORTUNIDADES: '/oportunidades',
+  CONVERSAS: '/conversas',
+  CONVERSA: (id: string) => `/conversas/${id}`,
+  RECUPERACOES: '/recuperacoes',
+  INTEGRACOES: '/integracoes',
+  RELATORIOS: '/relatorios',
+  CONFIGURACOES: '/configuracoes',
+  CONFIGURACOES_EMPRESA: '/configuracoes?tab=empresa',
+  CONFIGURACOES_EQUIPE: '/configuracoes?tab=equipe',
+  CONFIGURACOES_FATURAMENTO: '/configuracoes?tab=faturamento',
+} as const;

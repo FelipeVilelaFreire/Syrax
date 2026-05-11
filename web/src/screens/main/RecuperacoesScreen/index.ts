@@ -1,0 +1,1 @@
+export { RecuperacoesScreen } from './RecuperacoesScreen';

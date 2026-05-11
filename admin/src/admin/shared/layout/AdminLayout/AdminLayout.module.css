@@ -1,0 +1,16 @@
+.shell {
+  min-height: 100vh;
+  background: var(--admin-bg-secondary);
+}
+
+.main {
+  margin-left: var(--admin-sidebar-width);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  padding: var(--admin-space-2xl);
+}

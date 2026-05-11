@@ -1,0 +1,1 @@
+export { RecuperacoesTable } from './RecuperacoesTable';

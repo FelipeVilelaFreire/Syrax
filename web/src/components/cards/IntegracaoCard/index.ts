@@ -1,0 +1,1 @@
+export { IntegracaoCard } from './IntegracaoCard';

@@ -1,0 +1,95 @@
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.platform {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.events {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-subtle);
+}
+
+.statusDot {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+}
+
+.connected    { color: var(--color-success); }
+.disconnected { color: var(--color-neutral); }
+
+.note {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.webhookBox {
+  background: var(--color-card-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.webhookLabel {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.webhookInstructions {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-subtle);
+}
+
+.urlRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.url {
+  flex: 1;
+  font-size: var(--font-size-xs);
+  color: var(--color-text);
+  word-break: break-all;
+  font-family: monospace;
+}
+
+.copyBtn {
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  cursor: pointer;
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+.copyBtn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}

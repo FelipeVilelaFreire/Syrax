@@ -1,0 +1,1 @@
+export { IntegracoesScreen } from './IntegracoesScreen';

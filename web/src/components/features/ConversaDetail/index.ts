@@ -1,0 +1,1 @@
+export { ConversaDetail } from './ConversaDetail';

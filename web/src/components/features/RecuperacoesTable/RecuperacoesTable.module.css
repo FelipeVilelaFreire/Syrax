@@ -1,0 +1,51 @@
+.wrapper {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  min-width: 600px;
+}
+
+.table th {
+  text-align: left;
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text-subtle);
+  font-weight: var(--font-weight-medium);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.statusBadge {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-success);
+}
+
+.value {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+}
+
+.empty {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-sm);
+}

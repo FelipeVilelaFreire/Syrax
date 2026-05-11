@@ -1,0 +1,73 @@
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.product {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.temp {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.hot  { color: var(--color-error); }
+.warm { color: var(--color-warning); }
+.cold { color: var(--color-neutral); }
+
+.value {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+}
+
+.scoreRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scoreLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-subtle);
+}
+
+.scoreValue {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
+
+.idle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
